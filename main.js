@@ -38,13 +38,43 @@
     el.textContent = texto;
   }
 
+  // Crea el <img> del logo. Sobre fondos oscuros intenta usar la versión
+  // blanca; si ese archivo no existe todavía, cae en el logo normal
+  // dentro de un recuadro blanco con bordes redondeados.
+  function crearLogo(fondoOscuro) {
+    const wrap = document.createElement("span");
+    wrap.className = "logo-img-wrap";
+
+    const img = document.createElement("img");
+    img.className = "logo-img";
+    img.alt = CONFIG.nombre;
+
+    if (fondoOscuro) {
+      img.src = CONFIG.logo.blanco;
+      img.addEventListener(
+        "error",
+        () => {
+          wrap.classList.add("logo-fallback-bg");
+          img.src = CONFIG.logo.normal;
+        },
+        { once: true }
+      );
+    } else {
+      img.src = CONFIG.logo.normal;
+    }
+
+    wrap.appendChild(img);
+    return wrap;
+  }
+
   function renderHeader() {
-    document.getElementById("logo-text").textContent = CONFIG.nombre;
+    document.getElementById("logo").appendChild(crearLogo(false));
     document.title = `${CONFIG.hero.titulo} | ${CONFIG.nombre}`;
     setWhatsappLink(document.getElementById("header-whatsapp-btn"), "WhatsApp");
   }
 
   function renderHero() {
+    document.getElementById("hero-logo").appendChild(crearLogo(true));
     document.getElementById("hero-titulo").textContent = CONFIG.hero.titulo;
     document.getElementById("hero-subtitulo").textContent = CONFIG.hero.subtitulo;
     setWhatsappLink(document.getElementById("hero-whatsapp-btn"), CONFIG.hero.botonTexto);
@@ -162,6 +192,7 @@
   }
 
   function renderFooter() {
+    document.getElementById("footer-logo").appendChild(crearLogo(true));
     const anio = new Date().getFullYear();
     document.getElementById("footer-texto").textContent =
       `${CONFIG.nombre} · ${CONFIG.zona} · ${anio}`;

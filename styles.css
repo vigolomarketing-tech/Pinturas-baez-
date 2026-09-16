@@ -1,9 +1,9 @@
 /* ===== Variables ===== */
 :root {
-  --azul-oscuro: #0f2540;
-  --azul-oscuro-2: #14335a;
-  --acento: #f5a623;
-  --acento-oscuro: #d98c0f;
+  --azul-oscuro: #13263f;
+  --azul-oscuro-2: #1c3557;
+  --acento: #f2b705;
+  --acento-oscuro: #cf9a00;
   --blanco: #ffffff;
   --gris-claro: #f4f6f9;
   --gris-texto: #4a5567;
@@ -129,16 +129,16 @@ img {
 .btn-lg {
   padding: 16px 28px;
   font-size: 1.05rem;
-  box-shadow: 0 8px 20px rgba(245, 166, 35, 0.35);
+  box-shadow: 0 8px 20px rgba(242, 183, 5, 0.35);
 }
 
 /* ===== Header ===== */
 .site-header {
-  background: var(--azul-oscuro);
+  background: var(--blanco);
   position: sticky;
   top: 0;
   z-index: 40;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 10px rgba(19, 38, 63, 0.1);
 }
 
 .header-inner {
@@ -155,27 +155,77 @@ img {
   gap: 10px;
 }
 
-.logo-text {
-  font-family: var(--font-titulos);
-  color: var(--blanco);
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
 .header-cta {
   flex-shrink: 0;
+  border-color: var(--azul-oscuro);
+  color: var(--azul-oscuro);
+}
+
+.header-cta:hover {
+  background: var(--gris-claro);
+}
+
+/* ===== Logo (imagen) ===== */
+.logo-img-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.logo-fallback-bg {
+  background: var(--blanco);
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+.hero-logo,
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.4em;
+}
+
+.hero-logo .logo-img {
+  height: 64px;
+}
+
+.footer-logo .logo-img {
+  height: 30px;
 }
 
 /* ===== Hero ===== */
 .hero {
-  background:
-    linear-gradient(160deg, rgba(15, 37, 64, 0.94), rgba(15, 37, 64, 0.88)),
-    repeating-linear-gradient(135deg, rgba(245, 166, 35, 0.08) 0 14px, transparent 14px 28px);
+  position: relative;
+  background: var(--azul-oscuro);
   color: var(--blanco);
   padding: 64px 0 56px;
   text-align: center;
+  overflow: hidden;
+}
+
+/* Patrón de líneas verticales, como una fachada, detrás del contenido. */
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--azul-oscuro-2) 0,
+    var(--azul-oscuro-2) 2px,
+    transparent 2px,
+    transparent 34px
+  );
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -209,14 +259,14 @@ img {
   background: var(--blanco);
   border-radius: var(--radius);
   padding: 28px 22px;
-  box-shadow: 0 4px 16px rgba(15, 37, 64, 0.08);
+  box-shadow: 0 4px 16px rgba(19, 38, 63, 0.08);
   text-align: center;
   transition: transform var(--transicion), box-shadow var(--transicion);
 }
 
 .servicio-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(15, 37, 64, 0.14);
+  box-shadow: 0 10px 24px rgba(19, 38, 63, 0.14);
 }
 
 .servicio-icono {

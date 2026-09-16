@@ -6,6 +6,8 @@
 <title>Pintura y mantenimiento de edificios | Pinturas Báez</title>
 <meta name="description" content="Pintura de fachadas en altura con silleta, palieres y mantenimiento general de edificios en CABA y GBA Sur. Presupuesto sin cargo por WhatsApp." />
 
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -16,27 +18,7 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="#top" class="logo" id="logo" aria-label="Inicio">
-      <svg viewBox="0 0 64 64" width="44" height="44" aria-hidden="true" focusable="false">
-        <!-- Silueta de edificio -->
-        <rect x="10" y="18" width="26" height="38" fill="#0f2540" />
-        <rect x="15" y="24" width="5" height="5" fill="#f5a623" />
-        <rect x="24" y="24" width="5" height="5" fill="#f5a623" />
-        <rect x="15" y="34" width="5" height="5" fill="#f5a623" />
-        <rect x="24" y="34" width="5" height="5" fill="#f5a623" />
-        <rect x="15" y="44" width="5" height="5" fill="#f5a623" />
-        <rect x="24" y="44" width="5" height="5" fill="#f5a623" />
-        <!-- Cable y silleta colgando -->
-        <line x1="46" y1="6" x2="46" y2="30" stroke="#0f2540" stroke-width="2" />
-        <rect x="40" y="30" width="12" height="6" rx="1.5" fill="#f5a623" />
-        <line x1="41" y1="36" x2="41" y2="40" stroke="#0f2540" stroke-width="2" />
-        <line x1="51" y1="36" x2="51" y2="40" stroke="#0f2540" stroke-width="2" />
-        <!-- Rodillo -->
-        <rect x="38" y="40" width="16" height="7" rx="2" fill="#0f2540" />
-        <rect x="44" y="47" width="2.5" height="10" fill="#0f2540" />
-      </svg>
-      <span class="logo-text" id="logo-text"></span>
-    </a>
+    <a href="#top" class="logo" id="logo" aria-label="Inicio"></a>
     <a href="#contacto" class="btn btn-outline header-cta" id="header-whatsapp-btn">WhatsApp</a>
   </div>
 </header>
@@ -44,7 +26,9 @@
 <main id="top">
 
   <section class="hero">
+    <div class="hero-pattern" aria-hidden="true"></div>
     <div class="container hero-inner">
+      <div class="hero-logo reveal" id="hero-logo"></div>
       <h1 id="hero-titulo" class="reveal"></h1>
       <p id="hero-subtitulo" class="hero-subtitulo reveal"></p>
       <a href="#" id="hero-whatsapp-btn" class="btn btn-primary btn-lg reveal" target="_blank" rel="noopener"></a>
@@ -91,6 +75,7 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
+    <div class="footer-logo" id="footer-logo"></div>
     <p id="footer-texto"></p>
   </div>
 </footer>

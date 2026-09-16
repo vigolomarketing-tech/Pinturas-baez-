@@ -10,9 +10,18 @@ const CONFIG = {
   zona: "CABA y GBA Sur",
 
   // Número de WhatsApp en formato internacional, sin "+" ni espacios.
-  whatsapp: "5491100000000",
+  whatsapp: "5491145287310",
   whatsappMensaje:
     "Hola, vi su página y quiero pedir un presupuesto para un edificio.",
+
+  // --- Logo ---
+  // "normal" se usa en el header y sobre fondos claros.
+  // "blanco" se usa sobre fondos oscuros (hero y footer). Si ese archivo
+  // no existe todavía, se muestra "normal" dentro de un recuadro blanco.
+  logo: {
+    normal: "img/logo.png",
+    blanco: "img/logo-blanco.png",
+  },
 
   // --- Hero (portada) ---
   hero: {
