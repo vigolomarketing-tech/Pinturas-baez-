@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pintura y mantenimiento de edificios | Pinturas Báez</title>
+<meta name="description" content="Pintura de fachadas en altura con silleta, palieres y mantenimiento general de edificios en CABA y GBA Sur. Presupuesto sin cargo por WhatsApp." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="logo" id="logo" aria-label="Inicio">
+      <svg viewBox="0 0 64 64" width="44" height="44" aria-hidden="true" focusable="false">
+        <!-- Silueta de edificio -->
+        <rect x="10" y="18" width="26" height="38" fill="#0f2540" />
+        <rect x="15" y="24" width="5" height="5" fill="#f5a623" />
+        <rect x="24" y="24" width="5" height="5" fill="#f5a623" />
+        <rect x="15" y="34" width="5" height="5" fill="#f5a623" />
+        <rect x="24" y="34" width="5" height="5" fill="#f5a623" />
+        <rect x="15" y="44" width="5" height="5" fill="#f5a623" />
+        <rect x="24" y="44" width="5" height="5" fill="#f5a623" />
+        <!-- Cable y silleta colgando -->
+        <line x1="46" y1="6" x2="46" y2="30" stroke="#0f2540" stroke-width="2" />
+        <rect x="40" y="30" width="12" height="6" rx="1.5" fill="#f5a623" />
+        <line x1="41" y1="36" x2="41" y2="40" stroke="#0f2540" stroke-width="2" />
+        <line x1="51" y1="36" x2="51" y2="40" stroke="#0f2540" stroke-width="2" />
+        <!-- Rodillo -->
+        <rect x="38" y="40" width="16" height="7" rx="2" fill="#0f2540" />
+        <rect x="44" y="47" width="2.5" height="10" fill="#0f2540" />
+      </svg>
+      <span class="logo-text" id="logo-text"></span>
+    </a>
+    <a href="#contacto" class="btn btn-outline header-cta" id="header-whatsapp-btn">WhatsApp</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1 id="hero-titulo" class="reveal"></h1>
+      <p id="hero-subtitulo" class="hero-subtitulo reveal"></p>
+      <a href="#" id="hero-whatsapp-btn" class="btn btn-primary btn-lg reveal" target="_blank" rel="noopener"></a>
+    </div>
+  </section>
+
+  <section class="servicios" id="servicios">
+    <div class="container">
+      <h2 class="section-title reveal">Nuestros servicios</h2>
+      <div class="servicios-grid" id="servicios-grid"></div>
+    </div>
+  </section>
+
+  <section class="porque" id="porque">
+    <div class="container">
+      <h2 class="section-title reveal">Por qué elegirnos</h2>
+      <ul class="porque-lista" id="porque-lista"></ul>
+    </div>
+  </section>
+
+  <section class="galeria" id="galeria">
+    <div class="container">
+      <h2 class="section-title reveal">Trabajos realizados</h2>
+      <div class="galeria-grid" id="galeria-grid"></div>
+    </div>
+  </section>
+
+  <section class="pasos" id="como-trabajamos">
+    <div class="container">
+      <h2 class="section-title reveal">Cómo trabajamos</h2>
+      <ol class="pasos-lista" id="pasos-lista"></ol>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="container contacto-inner reveal">
+      <h2 class="section-title">Contactanos</h2>
+      <p id="contacto-zona"></p>
+      <a href="#" id="contacto-whatsapp-btn" class="btn btn-primary btn-lg" target="_blank" rel="noopener"></a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p id="footer-texto"></p>
+  </div>
+</footer>
+
+<a href="#" id="whatsapp-float" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.47.72 4.77 1.98 6.7L4.5 29l7.44-1.94a11.96 11.96 0 0 0 4.08.72c6.62 0 12.02-5.4 12.02-12.02C28.04 8.4 22.64 3 16.02 3zm0 21.86c-1.6 0-3.14-.42-4.5-1.2l-.32-.19-4.42 1.15 1.18-4.3-.21-.34a9.83 9.83 0 0 1-1.5-5.26c0-5.44 4.42-9.86 9.87-9.86 5.44 0 9.86 4.42 9.86 9.86 0 5.44-4.42 9.86-9.86 9.86zm5.4-7.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5-.17 0-.37-.02-.57-.02-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.13-.27-.2-.57-.35z"/>
+  </svg>
+</a>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Cerrar">&times;</button>
+  <div class="lightbox-content" id="lightbox-content"></div>
+</div>
+
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
