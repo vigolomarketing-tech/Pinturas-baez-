@@ -1,13 +1,12 @@
 /*
- * CONFIG central: todo el contenido editable del sitio vive acá.
- * main.js lee este objeto y arma la página. Para actualizar textos,
- * fotos, WhatsApp o servicios, alcanza con editar este archivo.
+ * CONFIG: datos interactivos que arma main.js (logo, WhatsApp, hero,
+ * galería). Los textos de servicios, por qué elegirnos, cómo trabajamos
+ * y contacto están escritos directamente en index.html para SEO.
  */
 
 const CONFIG = {
   // --- Datos generales ---
   nombre: "Pinturas Báez",
-  zona: "CABA y GBA Sur",
 
   // Número de WhatsApp en formato internacional, sin "+" ni espacios.
   whatsapp: "5491145287310",
@@ -31,37 +30,6 @@ const CONFIG = {
     botonTexto: "Pedir presupuesto por WhatsApp",
   },
 
-  // --- Servicios ---
-  // icono: "silleta" | "rodillo" | "mantenimiento"
-  servicios: [
-    {
-      icono: "silleta",
-      titulo: "Pintura de fachadas en altura",
-      descripcion:
-        "Pintura de frentes y medianeras con silleta, para edificios de cualquier altura, con los cuidados que requiere el trabajo vertical.",
-    },
-    {
-      icono: "rodillo",
-      titulo: "Palieres y espacios comunes",
-      descripcion:
-        "Pintura de palieres, escaleras, halls de entrada y demás espacios comunes, cuidando los tiempos de uso del edificio.",
-    },
-    {
-      icono: "mantenimiento",
-      titulo: "Mantenimiento general",
-      descripcion:
-        "Arreglos y mantenimiento edilicio en general, para que el edificio se mantenga en buen estado durante todo el año.",
-    },
-  ],
-
-  // --- Por qué elegirnos ---
-  porQueElegirnos: [
-    "Experiencia en trabajos verticales con silleta",
-    "Trabajo prolijo y cuidado de los espacios comunes",
-    "Presupuesto sin cargo, sin compromiso",
-    "Atención directa por WhatsApp con el encargado del trabajo",
-  ],
-
   // --- Galería de trabajos ---
   // Poné las fotos reales en la carpeta /img con estos nombres de archivo.
   // Si la imagen todavía no existe, se muestra un placeholder automáticamente.
@@ -72,29 +40,5 @@ const CONFIG = {
     { src: "img/obra-4.jpg", alt: "Escalera de espacio común pintada" },
     { src: "img/obra-5.jpg", alt: "Detalle de frente de edificio" },
     { src: "img/obra-6.jpg", alt: "Mantenimiento de espacio común" },
-  ],
-
-  // --- Cómo trabajamos ---
-  pasos: [
-    {
-      titulo: "Nos escribís",
-      descripcion:
-        "Nos contás qué necesita tu edificio por WhatsApp y coordinamos una visita.",
-    },
-    {
-      titulo: "Visitamos el edificio",
-      descripcion:
-        "Vamos a ver el edificio para entender bien el trabajo a realizar.",
-    },
-    {
-      titulo: "Te pasamos presupuesto",
-      descripcion:
-        "Te enviamos el presupuesto detallado, sin cargo y sin compromiso.",
-    },
-    {
-      titulo: "Hacemos el trabajo",
-      descripcion:
-        "Una vez aprobado, coordinamos día y horario y realizamos el trabajo.",
-    },
   ],
 };

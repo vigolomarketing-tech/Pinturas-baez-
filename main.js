@@ -4,30 +4,6 @@
   // Colores para los placeholders de la galería (se van repitiendo).
   const COLORES_PLACEHOLDER = ["#0f2540", "#14335a", "#f5a623", "#4a5567"];
 
-  const ICONOS_SERVICIOS = {
-    silleta: `
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="12" y1="6" x2="12" y2="26" stroke="currentColor" stroke-width="3" />
-        <line x1="52" y1="6" x2="52" y2="26" stroke="currentColor" stroke-width="3" />
-        <rect x="10" y="26" width="44" height="10" rx="2" stroke="currentColor" stroke-width="3" />
-        <line x1="16" y1="36" x2="16" y2="44" stroke="currentColor" stroke-width="3" />
-        <line x1="48" y1="36" x2="48" y2="44" stroke="currentColor" stroke-width="3" />
-        <rect x="20" y="44" width="24" height="4" rx="2" fill="currentColor" />
-        <rect x="8" y="52" width="48" height="4" rx="2" fill="currentColor" />
-      </svg>`,
-    rodillo: `
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="14" y="14" width="36" height="16" rx="3" stroke="currentColor" stroke-width="3" />
-        <rect x="29" y="30" width="6" height="18" fill="currentColor" />
-        <rect x="23" y="48" width="18" height="6" rx="2" fill="currentColor" />
-      </svg>`,
-    mantenimiento: `
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40 12l-6 6 4 4 6-6a10 10 0 0 1-13 13L12 48l4 4 19-19a10 10 0 0 0 13-13z"
-          stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
-      </svg>`,
-  };
-
   function whatsappUrl(mensaje) {
     const texto = encodeURIComponent(mensaje || CONFIG.whatsappMensaje);
     return `https://wa.me/${CONFIG.whatsapp}?text=${texto}`;
@@ -78,30 +54,6 @@
     document.getElementById("hero-titulo").textContent = CONFIG.hero.titulo;
     document.getElementById("hero-subtitulo").textContent = CONFIG.hero.subtitulo;
     setWhatsappLink(document.getElementById("hero-whatsapp-btn"), CONFIG.hero.botonTexto);
-  }
-
-  function renderServicios() {
-    const grid = document.getElementById("servicios-grid");
-    CONFIG.servicios.forEach((servicio) => {
-      const card = document.createElement("div");
-      card.className = "servicio-card reveal";
-      card.innerHTML = `
-        <div class="servicio-icono">${ICONOS_SERVICIOS[servicio.icono] || ""}</div>
-        <h3>${servicio.titulo}</h3>
-        <p>${servicio.descripcion}</p>
-      `;
-      grid.appendChild(card);
-    });
-  }
-
-  function renderPorque() {
-    const lista = document.getElementById("porque-lista");
-    CONFIG.porQueElegirnos.forEach((punto) => {
-      const li = document.createElement("li");
-      li.className = "reveal";
-      li.textContent = punto;
-      lista.appendChild(li);
-    });
   }
 
   function crearPlaceholder(alt, indice) {
@@ -170,32 +122,13 @@
     });
   }
 
-  function renderPasos() {
-    const lista = document.getElementById("pasos-lista");
-    CONFIG.pasos.forEach((paso, indice) => {
-      const li = document.createElement("li");
-      li.className = "paso-item reveal";
-      li.innerHTML = `
-        <span class="paso-numero">${indice + 1}</span>
-        <div>
-          <h3>${paso.titulo}</h3>
-          <p>${paso.descripcion}</p>
-        </div>
-      `;
-      lista.appendChild(li);
-    });
-  }
-
   function renderContacto() {
-    document.getElementById("contacto-zona").textContent = `Trabajamos en ${CONFIG.zona}.`;
     setWhatsappLink(document.getElementById("contacto-whatsapp-btn"), CONFIG.hero.botonTexto);
   }
 
   function renderFooter() {
     document.getElementById("footer-logo").appendChild(crearLogo(true));
-    const anio = new Date().getFullYear();
-    document.getElementById("footer-texto").textContent =
-      `${CONFIG.nombre} · ${CONFIG.zona} · ${anio}`;
+    document.getElementById("footer-anio").textContent = new Date().getFullYear();
   }
 
   function renderWhatsappFloat() {
@@ -225,10 +158,7 @@
   function init() {
     renderHeader();
     renderHero();
-    renderServicios();
-    renderPorque();
     renderGaleria();
-    renderPasos();
     renderContacto();
     renderFooter();
     renderWhatsappFloat();
